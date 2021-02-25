@@ -1,6 +1,9 @@
 <?php
 
 require_once './model/modelViaje.php';
+require_once './model/modelCiudad.php';
+require_once './view/view.php';
+require_once './controller/controllerUser.php';
 class controllerViaje{
 //ejercicio 1 alternativa A
     private $modelViaje;

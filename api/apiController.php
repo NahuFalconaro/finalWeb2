@@ -7,9 +7,14 @@
     calificaiones/  agregar
     calificaciones/:ID eliminar
 */ 
-
+require_once './model/modelCalificacion.php';
 class apiController{
 
+    private $modelCalificacion;
+
+    function __contruct(){
+        $this->modelCalificacion = new modelCalificacion();
+    }
 
     function getCalificaciones($params = null){
         $calificaciones = $this->modelCalificacion->getCalificaciones();
@@ -29,7 +34,7 @@ class apiController{
         }
     }
     function agregarCalificacion($params = null){
-        $data = $this->getData();
+        $data = $this->viewApi->getData();
         $agrego = $this->modelCalificaciones->addCalificacion($data->mensaje, $data->valor);
         if(!empty($agrego)){
             $this->viewApi->response("Agregado Correctamente", 200);

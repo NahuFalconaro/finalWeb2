@@ -2,7 +2,8 @@
 
 //ejercicio2 alternativa B
 
-
+require_once './model/modelViaje.php';
+require_once './model/modelCiudad.php';
 class controllerCiudad{
 
     private $modelCiudad;
