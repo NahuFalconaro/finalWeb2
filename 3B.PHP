@@ -1,0 +1,2 @@
+<?php
+//respondida en apiController
